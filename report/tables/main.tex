@@ -1,0 +1,16 @@
+\begin{tabular}{|l|cccc|}
+\hline
+Method & Acc & Macro-F1 & Acc (4 known) & Recall$_{unknown}$ \\
+\hline
+TF-IDF + LR (official baseline) & 0.8062 & 0.7916 & 0.9523 & 0.3778 \\
+TF-IDF + LR (official baseline) + pseudo-unknown & 0.7815 & 0.7303 & 0.9540 & 0.1302 \\
+mDeBERTa-v3-base, fine-tuned & 0.7745 & 0.7085 & 0.9596 & 0.0428 \\
+mDeBERTa-v3-base, fine-tuned + pseudo-unknown & 0.8294 & 0.8095 & 0.9564 & 0.3332 \\
+Hybrid: emb + LM + style & 0.7395 & 0.6921 & 0.9163 & 0.0902 \\
+Hybrid: emb + LM + style + pseudo-unknown & 0.7806 & 0.7621 & 0.9188 & 0.3341 \\
+Hybrid: TF-IDF + emb + LM + style & 0.7805 & 0.7152 & 0.9617 & 0.0630 \\
+Hybrid: TF-IDF + emb + LM + style + pseudo-unknown & 0.8379 & 0.8224 & 0.9638 & 0.4183 \\
+Hybrid: TF-IDF + LM + style (ours) & 0.7965 & 0.7498 & 0.9663 & 0.1546 \\
+Hybrid: TF-IDF + LM + style (ours) + pseudo-unknown & \textbf{0.8586} & \textbf{0.8487} & \textbf{0.9675} & \textbf{0.5067} \\
+\hline
+\end{tabular}

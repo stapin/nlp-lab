@@ -1,0 +1,15 @@
+\begin{tabular}{|l|ccc|ccc|}
+\hline
+Method & \multicolumn{3}{c|}{Acc (4 known classes)} & \multicolumn{3}{c|}{Human vs AI ROC-AUC} \\
+ & full & 40 words & $\Delta$, pp & full & 40 words & $\Delta$, pp \\
+\hline
+Binoculars, zero-shot & -- & -- & -- & 0.7633 & 0.7003 & -6.3 \\
+TF-IDF + LR (official baseline) & 0.9523 & 0.8865 & -6.6 & 0.9861 & 0.9722 & -1.4 \\
+TF-IDF + LR (official baseline) + pseudo-unknown & 0.9540 & 0.8855 & -6.8 & 0.9867 & 0.9734 & -1.3 \\
+mDeBERTa-v3-base, fine-tuned & 0.9596 & 0.8960 & -6.4 & 0.9914 & 0.9806 & -1.1 \\
+mDeBERTa-v3-base, fine-tuned + pseudo-unknown & 0.9564 & 0.8853 & -7.1 & 0.9946 & 0.9815 & -1.3 \\
+Hybrid: emb + LM + style & 0.9163 & 0.8111 & -10.5 & 0.9826 & 0.9600 & -2.3 \\
+Hybrid: TF-IDF + LM + style (ours) & 0.9663 & 0.9032 & -6.3 & 0.9862 & 0.9676 & -1.9 \\
+Hybrid: TF-IDF + LM + style (ours) + pseudo-unknown & 0.9675 & 0.9045 & -6.3 & 0.9896 & 0.9741 & -1.6 \\
+\hline
+\end{tabular}

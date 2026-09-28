@@ -1,0 +1,18 @@
+\begin{tabular}{|l|ccc|}
+\hline
+Method & Acc & F1 & ROC-AUC \\
+\hline
+Log-perplexity, zero-shot & 0.7677 & 0.8501 & 0.7892 \\
+Binoculars, zero-shot & 0.7786 & 0.8656 & 0.7633 \\
+TF-IDF + LR (official baseline) & 0.9378 & 0.9601 & 0.9861 \\
+TF-IDF + LR (official baseline) + pseudo-unknown & 0.9443 & 0.9645 & 0.9867 \\
+mDeBERTa-v3-base, fine-tuned & 0.9606 & 0.9755 & 0.9914 \\
+mDeBERTa-v3-base, fine-tuned + pseudo-unknown & \textbf{0.9685} & \textbf{0.9805} & \textbf{0.9946} \\
+Hybrid: emb + LM + style & 0.9305 & 0.9552 & 0.9826 \\
+Hybrid: emb + LM + style + pseudo-unknown & 0.9454 & 0.9652 & 0.9868 \\
+Hybrid: TF-IDF + emb + LM + style & 0.9212 & 0.9486 & 0.9827 \\
+Hybrid: TF-IDF + emb + LM + style + pseudo-unknown & 0.9463 & 0.9656 & 0.9897 \\
+Hybrid: TF-IDF + LM + style (ours) & 0.9279 & 0.9532 & 0.9862 \\
+Hybrid: TF-IDF + LM + style (ours) + pseudo-unknown & 0.9478 & 0.9666 & 0.9896 \\
+\hline
+\end{tabular}

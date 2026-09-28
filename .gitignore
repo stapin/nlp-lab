@@ -1,0 +1,13 @@
+data/train.parquet
+data/val.parquet
+data/dev.parquet
+features/
+logs/
+results/preds/
+__pycache__/
+report/*.aux
+report/*.log
+report/*.bbl
+report/*.blg
+report/*.out
+models/

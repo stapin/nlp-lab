@@ -1,0 +1,14 @@
+\begin{tabular}{|l|ccc|ccc|}
+\hline
+Method & \multicolumn{3}{c|}{qwen3-1.7b} & \multicolumn{3}{c|}{yandexgpt-5-lite-8b} \\
+ & ROC-AUC & TPR@5\% & Rec$_{unk}$ & ROC-AUC & TPR@5\% & Rec$_{unk}$ \\
+\hline
+Binoculars, zero-shot & 0.9086 & 0.6980 & -- & 0.8787 & 0.6103 & -- \\
+TF-IDF + LR (official baseline) & 0.9954 & 0.9863 & 0.3643 & 0.9962 & 0.9894 & 0.2809 \\
+TF-IDF + LR (official baseline) + pseudo-unknown & 0.9978 & 0.9937 & 0.5227 & 0.9962 & 0.9894 & 0.1172 \\
+mDeBERTa-v3-base, fine-tuned & 0.9973 & 0.9989 & 0.0338 & 0.9978 & 0.9968 & 0.0348 \\
+mDeBERTa-v3-base, fine-tuned + pseudo-unknown & \textbf{0.9985} & \textbf{1.0000} & 0.4752 & \textbf{0.9982} & \textbf{0.9979} & 0.2513 \\
+Hybrid: TF-IDF + LM + style (ours) & 0.9963 & 0.9989 & 0.1478 & 0.9932 & 0.9884 & 0.1267 \\
+Hybrid: TF-IDF + LM + style (ours) + pseudo-unknown & 0.9969 & \textbf{1.0000} & \textbf{0.5565} & 0.9948 & 0.9947 & \textbf{0.6684} \\
+\hline
+\end{tabular}
